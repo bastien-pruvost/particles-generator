@@ -198,6 +198,7 @@ span {
   left: 50%;
   width: var(--size);
   height: var(--size);
+  transform: scale(1);
   border-radius: 300px;
   background-color: red;
   filter: hue-rotate(var(--hueRotate));
@@ -207,20 +208,24 @@ span {
 }
 
 @-webkit-keyframes anim {
+  25% {
+    transform: scale(0.8);
+  }
   100% {
     top: var(--topPos);
     left: var(--leftPos);
-    width: 0;
-    height: 0;
+    transform: scale(0);
   }
 }
 
 @keyframes anim {
+  25% {
+    transform: scale(0.8);
+  }
   100% {
     top: var(--topPos);
     left: var(--leftPos);
-    width: 0;
-    height: 0;
+    transform: scale(0);
   }
 }
 #speed-1,

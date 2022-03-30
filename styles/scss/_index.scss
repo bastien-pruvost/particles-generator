@@ -6,15 +6,18 @@ body {
   font-weight: 600;
   color: $greyDark;
 }
+
 h3 {
   font-size: 1.1rem;
   font-weight: 800;
   color: $primaryColor;
   margin-bottom: 8px;
 }
+
 span {
   font-size: 0.9rem;
 }
+
 .wrapper {
   position: relative;
   height: 100vh;
@@ -71,7 +74,7 @@ span {
     margin: 0 20px;
     min-width: 120px;
   }
-  input[type="range"] {
+  input[type='range'] {
     width: 95%;
     appearance: none;
     height: 1px;
@@ -110,7 +113,6 @@ span {
       transform: scale(1);
       opacity: 0.95;
     }
-
   }
   .color-input {
     padding: 0;
@@ -155,6 +157,7 @@ span {
   width: var(--size);
   height: var(--size);
 
+  transform: scale(1);
   border-radius: 300px;
 
   background-color: red;
@@ -162,23 +165,22 @@ span {
   opacity: 1;
 
   animation: anim var(--animationTime) ease-in-out forwards;
-
 }
 
 @keyframes anim {
+  25% {
+    transform: scale(0.8);
+  }
   100% {
     top: var(--topPos);
     left: var(--leftPos);
-    width: 0;
-    height: 0;
+    transform: scale(0);
   }
 }
 
-
-#speed-1, 
-#speed-2, 
-#speed-3, 
+#speed-1,
+#speed-2,
+#speed-3,
 #speed-4 {
   direction: rtl;
 }
-
